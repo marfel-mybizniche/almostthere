@@ -1,0 +1,984 @@
+
+//Global 
+.hline {
+    display: flex;
+    text-align: center;
+    position: relative;
+    white-space: nowrap; 
+    align-items: center;
+    justify-content: center;
+
+    &:before, &:after {
+        content: "";
+        width: 100%;
+        border-top:1px solid $color-light-grey;
+        margin-right: 30px;
+    }
+    &:after {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    &.left {
+        justify-content: left;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+
+// Buttons
+.button {
+
+    &.btn-petfind {
+        background: $color-purple;
+        color: $color-white;
+        padding: 8px 30px 8px 12px;
+        display: inline-flex;
+        align-items: center;
+
+        img {
+            margin-right: 15px;
+        }
+
+        &:hover {
+            background: lighten($color-purple, 10%);
+        }
+    }
+
+    &.btn-icon {
+        padding: 8px 30px 8px 25px;
+        display: inline-flex;
+        align-items: center;
+        min-height: 57px;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+
+        small {
+            font-size: 16px;
+            font-weight: normal;
+            padding-left: 10px;
+        }
+        
+        img {
+            margin-right: 15px;
+            max-width: 38px;
+            max-height: 38px;
+        }
+    }
+}
+
+.button-a {
+    margin:0;
+}
+.button-a a, .wp-block-button__link {
+    background: $color-primary;
+    display: inline-block;
+    color: $color-darker;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 110px;
+    margin: 0 0 20px;
+    display: inline-flex;
+    min-height: 57px;
+    align-items: center;
+
+    &:hover {
+        background: $color-secondary;
+        color: $color-darker;
+    }
+
+    img {
+        margin-right: 15px;
+    }
+
+}
+
+a.underline {
+    border-bottom: 1px solid;
+}
+
+
+//Circle List
+ul.circle, ul.circle_list {
+    margin:0 0 20px;
+    padding:0;
+
+    li {
+        list-style: none;
+        position: relative;
+        padding:0 0 0 30px;
+        margin:0 0 10px;
+        line-height: 1.6;
+        font-size: 17px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border:2px solid $color-secondary;
+            border-radius: 50%;
+            top:9px;
+        }
+    }
+}
+
+
+//Left Icon
+.left-icon {
+    position: relative;
+    padding: 0 0 0 30px;
+    margin: 0 0 20px;
+    line-height: 1.3;
+
+    img:first-child {
+        position: absolute;
+        left: 0;
+        max-height: 20px;
+        top: 3px;
+        max-width: 16px;
+    }
+}
+
+
+
+// Blocks Overrides
+.wp-block-group__inner-container {
+    max-width: $grid-container;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .wp-block-group__inner-container  {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.wp-block-columns.grid-x .cell {
+    flex-basis: auto !important;
+}
+.wp-block-button.aligncenter {
+    text-align: center;
+}
+
+
+// Banner section
+.sec_banner {
+    position: relative;
+    text-align: center;
+    background: $color-darker;
+    padding: 110px 0 30px;
+
+    h1 {
+        color: $color-white;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    @include media(max-width, 1023px){
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    @include media(max-width, 639px){
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+
+//FIgures Section
+.sec_figures {
+
+    .wp-block-group__inner-container {
+        max-width: 100%;
+        padding:0;
+    }
+    
+    .figures {
+    
+        ul {
+            display: flex;
+            margin:0;
+            padding:0;
+            align-items: center;
+
+            li {
+                list-style: none;
+                margin:0;
+                flex-basis: 50%;
+   
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+// Intro Section
+.sec_intro {
+    background: $color-lighter;
+    border-top: 10px solid $color-white;
+    border-bottom: 10px solid $color-white;
+    overflow: hidden;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    .intro_box {
+        position: relative;
+
+        p {
+            font-size: 17px;
+        }
+        
+        .col_image {
+            margin-right: 90px;
+            margin-left: calc((-100vw - -1440x) / 2);
+    
+            img {
+                width: 100%;
+            }
+        }
+        .large-order-2 {
+            .col_image {
+                margin-right: calc((-100vw - -1410px) / 2);
+                margin-left: 40px;
+                border-left: 10px solid $color-white;
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    
+        .col_copy {
+            padding: 30px 0;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    
+        @include media(max-width, 1440px){
+            
+            .large-order-2 {
+                .col_image {
+                    margin-right: -15px;
+                }
+            }
+        }
+    
+        @include media(max-width, 1023px){
+            padding: 30px 0;
+    
+            .col_copy {
+    
+                > *:last-child {
+                    margin-bottom: 25px;
+                }
+            }
+            .col_image {
+                border:0 !important;
+                margin: 0 0 30px !important;
+            }
+        }
+    
+        @include media(max-width, 639px){
+    
+            h3 {
+                font-size: 28px;
+            }
+    
+        }
+    
+    }     
+
+
+    &.mission {
+        .intro_box {
+            p {
+                line-height: 1.7;
+            }
+        }
+    }
+
+}
+
+
+/* About Page Start */
+.sec_biography {
+    position: relative;
+
+    .bio_item {
+        position: relative;
+        padding:50px 0;
+
+        h5 {
+            margin-bottom: 20px;
+
+            small, s {
+                text-decoration: none;
+                color: $color-darker;
+                font-size: 17px;
+                display: inline-block;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        & + .bio_item {
+            border-top:1px solid $color-border-gray;
+        }
+
+        .bio_copy {
+            padding-left: 45px;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    } 
+    
+    @include media(max-width, 1023px){
+
+        .bio_item {
+            .bio_copy {
+                padding-left: 0;
+
+                h5 {
+                    text-align: center;
+                }
+            }
+
+            .bio_image {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+
+
+.sec_supporters {
+    padding:100px 0;
+
+    .logo_list {
+        ul {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+
+            li {
+                list-style: none;
+                padding:50px 30px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .btn-join {
+        color: black;
+        line-height: 20px;
+        letter-spacing: 1.6px;
+        padding: 17px 35px;
+
+        img {
+            margin-right: 5px;
+        }
+    }
+
+    
+    @include media(max-width, 1023px){
+        padding:50px 0;
+
+        .hline {
+            white-space: normal;
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+
+        
+        .logo_list {
+            ul {
+                li {
+                    padding:20px;
+                }
+            }
+        }
+    }
+}
+/* About Page END */
+
+
+/* Employment Page Start */
+.sec_joblist {
+    overflow: hidden;
+
+    .jobs_side {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        padding: 60px 0;
+        margin: 0 -30px 0 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: calc((-100vw - -1410px) / 2);
+            top:0;
+            bottom: 0;
+            right: 0;
+            background: $color-secondary;
+            z-index: -1;
+        }
+    }
+    .jobs_menu {
+        margin:0;
+        padding:0;
+
+        .tabs-title {
+            list-style: none;
+            float: none;
+            position: relative;
+
+            a {
+                font-size: 22px;
+                font-weight: bold;
+                color: $color-primary;
+                line-height: 1;
+                padding:15px 15px 15px 0;
+
+                &:hover,
+                &:focus {
+                    color: $color-white;
+                    background: none;
+                }
+            }
+
+            &.is-active {
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    right: -10px;
+                    top: 15px;
+                    background: $color-secondary;
+                    width: 20px;
+                    height: 20px;
+                    transform: rotate(45deg);
+                }
+
+                a {
+                    color: $color-white;
+                    background: none;
+                }
+            }
+        }
+
+    }
+
+    .jobs_content {
+        padding:60px 0 60px 90px;
+
+        h6 {
+            font-size: 17px;
+            margin:0 0 5px;
+        }
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin:0 0 15px;
+
+            strong, b {
+                font-weight: 500;
+            }
+        }
+
+        ul {
+            margin:0 0 20px;
+            padding:0;
+
+            li {
+                list-style: none;
+                position: relative;
+                padding:0 0 0 30px;
+                margin:0 0 10px;
+                line-height: 1.6;
+                font-size: 17px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border:2px solid $color-secondary;
+                    border-radius: 50%;
+                    top:9px;
+                }
+            }
+        }
+
+        .job_title {
+
+            h2 {
+                font-size: 36px;
+                margin:0 0 15px;
+                letter-spacing: -1px;
+            }
+
+            h6 {
+                margin: 10px 0 15px;;
+            }
+        }
+
+        .job_summary,
+        .job_duties,
+        .job_qualifications,
+        .job_skills {
+            margin-bottom: 20px;
+        }
+
+        .tabs-panel {
+            padding:0;
+        }
+
+        .btn-apply {
+            color: black;
+            line-height: 20px;
+            letter-spacing: 1.6px;
+            padding: 17px 35px;
+
+            img {
+                margin-right: 5px;
+            }
+        }
+    }
+    
+    
+    @include media(max-width, 1440px){
+        .jobs_side {
+            &:before {
+                left: -15px;
+                right: -15px;
+            }
+        }
+    }
+    
+    @include media(max-width, 1023px){
+        .jobs_side {
+            margin-right:0;
+            padding:20px 0;
+            &:before {
+                left: -15px;
+                right: -15px;
+            }
+        }
+
+        .jobs_menu {
+            display: flex;
+            justify-content: center;
+            flex-flow: wrap;
+
+            .tabs-title {
+                a {
+                    font-size: 15px;
+                    padding:10px 12px;
+                }
+            }
+        }
+
+        .jobs_content {
+            padding-left: 0;
+        }
+    }
+}
+/* Employment Page END */
+
+
+
+/* Volunteer Page Start */
+.sec_volunteer {
+    position: relative;
+    padding:60px 0;
+
+    h4 {
+        margin-bottom: 20px;
+    }
+
+    .role_item {
+        padding:45px 0;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 9%;
+            right: 9%;
+            bottom: 0;
+            border-bottom:1px solid $color-light-grey;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+            figure {
+                figcaption {
+                    font-weight: bold;
+                    display: block;
+                    padding:10px 0 0;
+                }
+            }
+        }
+
+        .copy {
+            padding-right: 90px;
+        }
+    }
+    
+    @include media(max-width, 1440px){
+        .role_item {
+            .copy {
+                padding-right: 0;
+            }
+        }
+    }
+
+    
+    @include media(max-width, 1023px){
+        .role_item {
+            &:before {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+}
+/* Volunteer Page END */
+
+
+/* Portal Page Start */
+.sec_portal {
+    background: $color-green;
+    color: $color-white;
+    padding:110px 0 80px;
+    text-align: center;
+
+    a {
+        color: $color-primary;
+    }
+
+    p {
+        color: $color-white;
+    }
+
+    h4 {
+        margin-bottom: 40px;
+        color: $color-primary;
+
+        span {
+            color: $color-white;
+        }
+    }
+
+    hr {
+        border-color: $color-success;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .login-form {
+        background: $color-white;
+        padding:0 0 10px;
+        display: inline-block;
+
+        iframe {
+            border:0;
+            width: 600px;
+            height: 100%;
+            min-height: 330px;
+            max-width: 100%;
+        }
+    }
+}
+/* Portal Page End */
+
+
+/* Events Page Start */
+.sec_events {
+    position: relative;
+
+    .upcoming_events {
+        padding: 60px 0;
+
+        h3 {
+            margin-bottom: 25px;
+        }
+    }
+    .event_item {
+        padding:0 25px;
+        position: relative;
+        border:1px solid $color-light-grey;
+        margin:20px 0 30px 0;
+
+        figure {
+            margin: 0 -25px 25px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .past_events {
+        position: relative;
+        background: $color-lighter;
+        padding: 60px 0;
+        overflow: hidden;
+        
+        h3 {
+            margin-bottom: 30px;
+        }
+    }
+    .past_item {
+        padding:30px 0;
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+
+        .img_slider {
+            margin-right: calc((-100vw - -1440px) / 2);
+            margin-bottom: 35px;
+
+            ul {
+                margin:0 -280px 0 0;
+                padding:0;
+                display: flex;
+
+                li {
+                    list-style: none;    
+                    flex-basis: 330px;
+                    padding:0 30px 0 0;
+                    max-height:210px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .copy {
+            position: relative;
+        }
+
+        .nav_slider {
+            float: right;
+
+            span {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                opacity: 0.3;
+                margin:0 15px;
+                cursor: pointer;
+
+                &.prev {
+                    background: url(../img/icons/icn-angle-left-d.svg) no-repeat center;
+                }
+                &.next {
+                    background: url(../img/icons/icn-angle-right-d.svg) no-repeat center;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 1440px) {
+        .past_item {
+            .img_slider {
+                margin-right: -15px;
+
+                ul {
+                    margin-right:-15px;
+                }
+            }
+
+        }
+    }
+    
+    @include media(max-width, 1023px) {
+        .nav_slider {
+            span {
+                width: 30px;
+                height: 30px;
+                margin:0 5px;
+                background-size: 12px;
+            }
+        }
+    }
+
+    @include media(max-width, 639px) {
+        .past_item {
+
+            .image {
+                margin-bottom: 15px;
+            }
+
+            .nav_slider {
+                display: none;
+            }
+        }
+
+    }
+}
+/* Events Page Start */
+
+
+/* Foster Page Start */
+.sec_foster {
+    padding: 60px 0;
+
+    h4 {
+        margin-bottom: 20px;
+    }
+
+    .foster_item {
+        
+        + .foster_item {
+            margin-top: 60px;
+        }
+
+        .image {
+            &.left {
+                padding-right: 30px;
+            }
+
+            &.right {
+                padding-left: 30px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    ul.steps_list {
+        margin:0;
+        padding: 0;
+        li {
+            list-style: none;
+            position: relative;
+            padding:0 0 0 105px;
+            margin:0 0 40px;
+
+            > *:last-child {
+                margin-bottom: 0;
+            }
+
+            h5:first-child {
+                position: absolute;
+                left: 0;
+                top:7px;
+            }
+        }
+    }
+}
+/* Foster Page End */
+
+
+/* Adopt Page Start */
+.sec_adopt {
+    padding: 70px 0;
+    font-size: 17px;
+
+    p {
+        font-size: 17px;
+    }
+
+    .adopt_loc {
+        margin-bottom: 60px;
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .join_fb {
+        padding:80px 80px 60px 80px;
+        background-size: cover;
+
+        h3 {
+            margin-bottom: 25px;
+        }
+    }
+
+    .fb_link {
+        color: $color-fb;
+        font-size: 22px;
+        font-weight: bold;
+        display: flex;
+        img {
+            margin-right: 20px;
+        }
+        a {
+            color: $color-fb;
+            display: inline-block;
+            border-bottom: 1px solid $color-fb;
+        }
+    }
+
+    @include media(max-width, 639px) {
+        h3 {
+            font-size: 28px;
+        }
+
+        .join_fb {
+            padding:40px 20px;
+        }
+
+        .fb_link {
+            font-size: 17px;
+        }
+    }
+}
+/* Adopt Page End */
