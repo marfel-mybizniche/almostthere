@@ -1,6 +1,8 @@
 @import "main";
 /* your Code Here */
-
+.home p {
+    font-size: $paragraph-fs-home;
+}
 
 header .hsnav-s11 .navbar .navleft.navmenu{
     a{

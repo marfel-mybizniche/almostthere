@@ -120,3 +120,7 @@ body {
     max-width: 38px;
     max-height: 38px;
 }
+
+.wp-block-cover__inner-container {
+    color: #000;
+}
