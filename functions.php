@@ -207,6 +207,24 @@ function mbn_myme_types($mime_types){
 add_filter('upload_mimes', 'mbn_myme_types');
 
 
+add_filter( 'gform_next_button_3', 'input_to_button', 10, 2 );
+add_filter( 'gform_previous_button_3', 'input_to_button', 10, 2 );
+add_filter( 'gform_submit_button_3', 'input_to_button', 10, 2 );
+function input_to_button( $button, $form ) {
+    $dom = new DOMDocument();
+    $dom->loadHTML( $button );
+    $input = $dom->getElementsByTagName( 'input' )->item(0);
+    $new_button = $dom->createElement( 'button' );
+    $button_span = $dom->createElement( 'span', $input->getAttribute( 'value' ) );
+    $new_button->appendChild( $button_span );
+    $input->removeAttribute( 'value' );
+    foreach( $input->attributes as $attribute ) {
+        $new_button->setAttribute( $attribute->name, $attribute->value );
+    }
+    $input->parentNode->replaceChild( $new_button, $input );
+    return $dom->saveHtml( $new_button );
+}
+
 require MBN_DIR_PATH.'/includes/tgmpa/init.php';
 require MBN_DIR_PATH.'/includes/post-types.php';
 require MBN_DIR_PATH.'/includes/shortcodes.php';

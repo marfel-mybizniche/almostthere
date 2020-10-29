@@ -262,7 +262,7 @@ ul.circle, ul.circle_list {
     line-height: 1.3;
 
     img:first-child {
-        position: absolute;
+        position: absolute; 
         left: 0;
         max-height: 20px;
         top: 3px;
@@ -291,6 +291,65 @@ ul.circle, ul.circle_list {
 .wp-block-button.aligncenter {
     text-align: center;
 }
+
+
+// Gravity Form Overrides
+.gform_wrapper .field_half {
+	display:inline-block;
+	width:calc(50% - 15px);
+}
+.gform_wrapper .field_half + .field_half {
+    margin-left: 30px !important;
+}
+
+.gform_wrapper .fields .address_city {
+	width:100%;
+}
+.gform_wrapper .fields .address_state {
+	width: calc(50% - 15px) !important;
+	padding: 0 !important;
+	margin-right: 0 !important;
+}
+.gform_wrapper .fields .address_zip {
+	width: calc(50% - 15px) !important;
+	margin-left: 30px;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+}
+.gform_wrapper .fields label,
+.gform_wrapper .field label {
+	font-size:17px !important;
+	font-weight:normal;
+	margin:0 0 5px !important;
+	
+}
+.gform_wrapper .field select,
+.gform_wrapper .fields select{
+	padding: 12px 30px 12px 12px !important;
+	margin:0 0 20px !important;
+}
+.gform_wrapper .fields input,
+.gform_wrapper .field input {
+	padding:15px!important;
+	margin:0 0 20px !important;
+}
+
+.gform_wrapper .fields .gf_name_has_2 {
+	width:auto !important;
+}
+.gform_wrapper .fields  .gf_name_has_2 > span {
+	width: calc(50% - 15px) !important;
+	padding: 0;
+}
+.gform_wrapper .fields  .gf_name_has_2 > span + span {
+	margin-left: 30px;
+}
+.gform_wrapper .fields .StripeElement {
+	height:60px;
+    padding:20px 15px;
+    margin-bottom: 20px;
+}
+
 
 
 // Banner section
@@ -1118,6 +1177,140 @@ ul.circle, ul.circle_list {
 .sec_donate {
     position: relative;
     padding: 80px 0;
+
+    .donate_steps {
+        margin-bottom:60px;
+
+        .button {
+            background:#9fcb4d;
+            display:inline-flex !important;
+            align-items:center;
+            padding:15px 30px;
+        }
+        .gform_previous_button {
+            background:#d5d5d5;
+
+            &:before {
+                content: "";
+                background: url('/wp-content/uploads/2020/10/icn-arrow-rc.svg') no-repeat center;
+                width: 25px;
+                height: 25px;
+                display:inline-block;
+                transform: rotate(-180deg);
+                margin-right:20px;
+                margin-left:-10px;
+            } 
+        }
+        
+        .gform_button:after,
+        .gform_next_button:after{
+            content: "";
+            background: url('/wp-content/uploads/2020/10/icn-arrow-rc.svg') no-repeat center;
+            width: 25px;
+            height: 25px;
+            display:inline-block;
+            margin-left:20px;
+            margin-right:-10px;
+        }
+
+        .gf_page_steps {
+            display:flex;
+            margin:0 0 80px;
+            border:0;
+
+            .gf_step {
+                font-family: "Caveat", cursive;
+                color: #000;
+                font-size: 36px;
+                line-height: 1;
+                font-weight: 400;
+                letter-spacing: -1px;
+                flex:1;
+                text-align:center;
+                height:auto;
+                margin:0;
+                background:#f5f5f5;
+                opacity:1;
+                padding:5px 10px 10px;
+                position: relative;
+            }
+
+            .gf_page_steps .gf_step_active {
+                color: #6d9f0f;
+
+                &:before {
+                    content: "";
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    border-bottom: 5px solid;
+                    bottom:-5px;
+                }
+            }
+
+            .gf_step_number, .gf_step_clear {
+	            display:none !important;
+            }
+        }
+
+        ul.gform_fields li.gfield {
+            padding:0;
+        }
+
+        .inflex ul.gfield_radio {
+            display:flex;
+
+            > li {
+                flex-grow:1;
+            }
+        }
+
+        .gform_page_footer {
+            text-align:center;
+            border:0;
+        }
+
+        //Step 1
+        .donate_step_1 {}
+
+        //Step 2
+        .donate_step_2 {
+            max-width:810px;
+            margin:0 auto;
+
+            .gform_page_footer {
+                text-align:right;
+
+                .gform_previous_button {
+                    float:left;
+                }
+
+                .gform_next_button {
+                    margin-right:0 !important;
+                }
+            }
+        }
+
+        //Step 3
+        .donate_step_3 {
+            max-width:810px;
+            margin:0 auto;
+
+            .gform_page_footer {
+                text-align:right;
+
+                .gform_previous_button {
+                    float:left;
+                }
+
+                .gform_next_button {
+                    margin-right:0 !important;
+                }
+            }
+        }
+
+    }
+
 
     .h5_block {
         background: $color-lighter;
