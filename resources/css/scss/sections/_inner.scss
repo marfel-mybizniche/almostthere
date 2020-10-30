@@ -300,7 +300,8 @@ ul.circle, ul.circle_list {
 // Gravity Form Overrides
 .gform_wrapper {
     .field_half {
-	    display:inline-block;
+        display:inline-block;
+        vertical-align: top;
         width:calc(50% - 15px) !important;
 
         + .field_half {
@@ -328,6 +329,10 @@ ul.circle, ul.circle_list {
         .validation_message {
             padding:0 !important;
             margin:-10px 0 10px;
+        }
+
+        &:not(.field_half) {
+            min-width: 100%;
         }
     }
 
@@ -363,15 +368,21 @@ ul.circle, ul.circle_list {
 
         .address_city {
             width:100%;
+            padding-right: 0;
+            min-width: 100%;
         }
         .address_state {
             width: calc(50% - 15px) !important;
-            padding: 0 !important;
+            padding-right: 0 !important;
             margin-right: 0 !important;
+
+            + .address_zip {
+                padding-right: 0 !important;
+                margin-left: 30px;
+            }
         }
-        .address_state {
+        .address_zip {
             width: calc(50% - 15px) !important;
-            padding: 0 !important;
             margin-right: 0 !important;
         }
 
@@ -604,14 +615,30 @@ ul.circle, ul.circle_list {
             }
     
         }
+
+        
     
     }     
-
 
     &.mission {
         .intro_box {
             p {
                 line-height: 1.7;
+            }
+        }
+    }
+
+    &.donate {
+
+        @include media(max-width, 1199px){
+            h3 {
+                font-size: 32px;
+            }
+        }
+
+        @include media(max-width, 480px){
+            h3 {
+                font-size: 23px;
             }
         }
     }
@@ -1388,13 +1415,13 @@ ul.circle, ul.circle_list {
         margin-bottom:60px;
 
         .button {
-            background:#9fcb4d;
+            background:$color-secondary;
             display:inline-flex !important;
             align-items:center;
             padding:15px 30px;
         }
         .gform_previous_button {
-            background:#d5d5d5;
+            background:$color-light-grey;
 
             &:before {
                 content: "";
@@ -1426,7 +1453,7 @@ ul.circle, ul.circle_list {
 
             .gf_step {
                 font-family: "Caveat", cursive;
-                color: #000;
+                color: $color-black;
                 font-size: 36px;
                 line-height: 1;
                 font-weight: 400;
@@ -1435,7 +1462,7 @@ ul.circle, ul.circle_list {
                 text-align:center;
                 height:auto;
                 margin:0;
-                background:#f5f5f5;
+                background:$color-lighter;
                 opacity:1;
                 padding:5px 10px 10px;
                 position: relative;
