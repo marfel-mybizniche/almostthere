@@ -139,7 +139,7 @@
 
                             <div class="grid-x grid-margin-x job_action">
                                 <div class="cell medium-9 medium-offset-3">
-                                    <a href="#" data-title="<?php the_title(); ?>" class="button primary btn-apply">
+                                    <a href="https://wrigleymansion.formstack.com/forms/atfc_employment" target="_blank" data-title="<?php the_title(); ?>" class="button secondary btn-apply">
                                         <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-apply.svg" alt="">
                                         apply for  this job
                                     </a>    

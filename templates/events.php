@@ -35,9 +35,16 @@
                     <div class="cell large-4">
                         <div class="event_item">
                             <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-event.jpg" alt=""></figure>
-                            <div class="edate"><?php the_field('event_date') ?></div>
+                            <div class="edate">
+                                <?php //the_field('event_date');
+                                    $unixtimestamp = strtotime( get_field('event_date') );
+                                    echo date_i18n( "jS F Y", $unixtimestamp );
+                                
+                                ?>
+                                
+                            </div>
                             <h5 class="etitle"><?php the_title(); ?></h5>
-                            <p class="edisc"><?php the_content(); ?></p>
+                            <div class="edisc"><?php the_content(); ?></div>
                         </div>
                     </div>
                     <?php endwhile; wp_reset_postdata(); ?>

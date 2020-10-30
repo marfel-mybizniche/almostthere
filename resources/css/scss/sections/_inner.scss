@@ -246,7 +246,7 @@ ul.circle, ul.circle_list {
             left: 0;
             width: 10px;
             height: 10px;
-            border:2px solid $color-secondary;
+            border:2px solid $color-primary;
             border-radius: 50%;
             top:9px;
         }
@@ -744,7 +744,7 @@ ul.circle, ul.circle_list {
             top:0;
             bottom: 0;
             right: 0;
-            background: $color-secondary;
+            background: $color-dgreen;
             z-index: -1;
         }
     }
@@ -760,7 +760,7 @@ ul.circle, ul.circle_list {
             a {
                 font-size: 22px;
                 font-weight: bold;
-                color: $color-primary;
+                color: $color-secondary;
                 line-height: 1;
                 padding:15px 15px 15px 0;
 
@@ -778,7 +778,7 @@ ul.circle, ul.circle_list {
                     position: absolute;
                     right: -10px;
                     top: 15px;
-                    background: $color-secondary;
+                    background: $color-dgreen;
                     width: 20px;
                     height: 20px;
                     transform: rotate(45deg);
@@ -1043,7 +1043,20 @@ ul.circle, ul.circle_list {
 
             img {
                 width: 100%;
+
             }
+        }
+
+        .etitle {
+            color: $color-primary;
+        }
+
+        .edate {
+            font-size: 17px;
+            font-weight: bold;
+            color: $color-grey-darker;
+            text-transform: uppercase;
+            margin: 0 0 8px;
         }
     }
 
@@ -1061,8 +1074,14 @@ ul.circle, ul.circle_list {
         padding:30px 0;
 
         .image {
+            figure {
+                height: 410px;
+                border:1px solid $color-light-grey;
+            }
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
@@ -1079,10 +1098,12 @@ ul.circle, ul.circle_list {
                     list-style: none;    
                     flex-basis: 330px;
                     padding:0 30px 0 0;
-                    max-height:210px;
 
                     img {
                         width: 100%;
+                        height: 270px;
+                        object-fit: cover;
+                        object-position: top;
                     }
                 }
             }
@@ -1094,6 +1115,8 @@ ul.circle, ul.circle_list {
 
         .nav_slider {
             float: right;
+            position: relative;
+            z-index: 2;
 
             span {
                 display: inline-block;
@@ -1124,19 +1147,58 @@ ul.circle, ul.circle_list {
 
                 ul {
                     margin-right:-15px;
+                    
+                    li {
+                        img {
+                            height: 210px;
+                        }
+                    }
                 }
             }
 
+            .image figure {
+                height: 320px;
+            }
         }
+        
     }
     
     @include media(max-width, 1023px) {
-        .nav_slider {
-            span {
-                width: 30px;
-                height: 30px;
-                margin:0 5px;
-                background-size: 12px;
+        
+        .past_item {
+
+            .nav_slider {
+                span {
+                    width: 30px;
+                    height: 30px;
+                    margin:0 5px;
+                    background-size: 15px !important;
+                }
+            }
+
+            .copy {
+                h4 {
+                    display: block;
+                    white-space: normal;
+                    text-align: left;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 767px) {
+        .past_item {
+            .img_slider {
+                ul {
+                    li {
+                        img {
+                            height: 170px;
+                        }
+                    }
+                }
             }
         }
     }
