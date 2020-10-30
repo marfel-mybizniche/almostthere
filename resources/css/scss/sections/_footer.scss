@@ -82,6 +82,29 @@
         border:solid 1px #4b4b4b;
         padding:20px 30px 25px 30px;
         margin-bottom:40px;
+
+        ul.gform_fields {
+            margin: 0 !important;
+            list-style-type: none;
+            display: block;
+        }
+        ul li.gfield {
+            margin-top: 16px;
+            padding-top: 0;
+        }
+        .hidden_label .gfield_label {
+            clip: rect(1px,1px,1px,1px);
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+        .gform_footer {
+            padding: 16px 0 10px 0;
+            margin: 16px 0 0 0;
+            clear: both;
+            width: 100%;
+        }
     }
 
     .footer_contact_details{

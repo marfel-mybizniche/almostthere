@@ -98,21 +98,21 @@ function mbn_enqueue_scripts(){
     wp_enqueue_script('foundation', MBN_ASSETS_URI.'/vendor/foundation/dist/js/foundation.min.js', [], $wp_version);
 
     // Mmenu Light
-    wp_enqueue_style('mmenu-light', MBN_ASSETS_URI.'/vendor/mmenu/mmenu-light.css', [], $wp_version);
-    wp_enqueue_script('mmenu-light', MBN_ASSETS_URI.'/vendor/mmenu/mmenu-light.js', [], $wp_version);
+    //wp_enqueue_style('mmenu-light', MBN_ASSETS_URI.'/vendor/mmenu/mmenu-light.css', [], $wp_version);
+    //wp_enqueue_script('mmenu-light', MBN_ASSETS_URI.'/vendor/mmenu/mmenu-light.js', [], $wp_version);
 
     // slick
     wp_enqueue_style('slick', MBN_ASSETS_URI.'/vendor/slick/slick.css', [], $wp_version);
     wp_enqueue_script('slick', MBN_ASSETS_URI.'/vendor/slick/slick.min.js', [], $wp_version);
    
     // Masonry
-    wp_enqueue_script('masonry', MBN_ASSETS_URI.'/vendor/masonry.pkgd.min.js', [], $wp_version);
+    //wp_enqueue_script('masonry', MBN_ASSETS_URI.'/vendor/masonry.pkgd.min.js', [], $wp_version);
 
     // Match Height
-    wp_enqueue_script('match-height', MBN_ASSETS_URI.'/vendor/jquery.matchHeight-min.js', [], $wp_version);
+    //wp_enqueue_script('match-height', MBN_ASSETS_URI.'/vendor/jquery.matchHeight-min.js', [], $wp_version);
 
     // Nicescroll
-    wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
+    //wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
     
     // Fancybox
     wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/fancybox.min.css', [], $wp_version);
@@ -194,7 +194,7 @@ function mbn_register_sidebars(){
         ));
     }
 }
-add_action('widgets_init', 'mbn_register_sidebars');
+//add_action('widgets_init', 'mbn_register_sidebars');
 
 
 /**
@@ -231,5 +231,5 @@ require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/utils.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
-require MBN_DIR_PATH.'/includes/woocommerce-hooks.php';
-require MBN_DIR_PATH.'/includes/header-menu-walker.php';
+//require MBN_DIR_PATH.'/includes/woocommerce-hooks.php';
+//require MBN_DIR_PATH.'/includes/header-menu-walker.php';

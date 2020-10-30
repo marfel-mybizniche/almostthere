@@ -188,6 +188,12 @@ ul.circle, ul.circle_list {
             top:9px;
         }
     }
+
+    &.large {
+        li {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 
@@ -721,7 +727,7 @@ ul.circle, ul.circle_list {
             top:0;
             bottom: 0;
             right: 0;
-            background: $color-dgreen;
+            background: $color-green;
             z-index: -1;
         }
     }
@@ -755,7 +761,7 @@ ul.circle, ul.circle_list {
                     position: absolute;
                     right: -10px;
                     top: 15px;
-                    background: $color-dgreen;
+                    background: $color-green;
                     width: 20px;
                     height: 20px;
                     transform: rotate(45deg);
