@@ -294,62 +294,161 @@ ul.circle, ul.circle_list {
 
 
 // Gravity Form Overrides
-.gform_wrapper .field_half {
-	display:inline-block;
-	width:calc(50% - 15px);
-}
-.gform_wrapper .field_half + .field_half {
-    margin-left: 30px !important;
-}
+.gform_wrapper {
+    .field_half {
+	    display:inline-block;
+        width:calc(50% - 15px) !important;
 
-.gform_wrapper .fields .address_city {
-	width:100%;
-}
-.gform_wrapper .fields .address_state {
-	width: calc(50% - 15px) !important;
-	padding: 0 !important;
-	margin-right: 0 !important;
-}
-.gform_wrapper .fields .address_zip {
-	width: calc(50% - 15px) !important;
-	margin-left: 30px;
-	margin-right: 0 !important;
-	padding-right: 0 !important;
-}
-.gform_wrapper .fields label,
-.gform_wrapper .field label {
-	font-size:17px !important;
-	font-weight:normal;
-	margin:0 0 5px !important;
-	
-}
-.gform_wrapper .field select,
-.gform_wrapper .fields select{
-	padding: 12px 30px 12px 12px !important;
-	margin:0 0 20px !important;
-}
-.gform_wrapper .fields input,
-.gform_wrapper .field input {
-	padding:15px!important;
-	margin:0 0 20px !important;
-}
+        + .field_half {
+            margin-left: 30px !important;
+        }
+    }
 
-.gform_wrapper .fields .gf_name_has_2 {
-	width:auto !important;
-}
-.gform_wrapper .fields  .gf_name_has_2 > span {
-	width: calc(50% - 15px) !important;
-	padding: 0;
-}
-.gform_wrapper .fields  .gf_name_has_2 > span + span {
-	margin-left: 30px;
-}
-.gform_wrapper .fields .StripeElement {
-	height:60px;
-    padding:20px 15px;
-    margin-bottom: 20px;
-}
+    .field {
+        label {
+            font-size:17px !important;
+            font-weight:normal;
+            margin:0 0 5px !important;
+        }
 
+        input {
+            padding:15px!important;
+            margin:0 0 20px !important;
+        }
+
+        select{
+            padding: 12px 30px 12px 12px !important;
+            margin:0 0 20px !important;
+        }
+
+        .validation_message {
+            padding:0 !important;
+            margin:-10px 0 10px;
+        }
+    }
+
+    .fields {
+        label {
+            font-size:17px !important;
+            font-weight:normal;
+            margin:0 0 5px !important;
+        }
+
+        input {
+            padding:15px!important;
+            margin:0 0 20px !important;
+        }
+
+        select{
+            padding: 12px 30px 12px 12px !important;
+            margin:0 0 20px !important;
+        }
+        
+        .gf_name_has_2 {
+            width:auto !important;
+            
+            > span {
+                width: calc(50% - 15px) !important;
+                padding: 0;
+
+                + span {
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        .address_city {
+            width:100%;
+        }
+        .address_state {
+            width: calc(50% - 15px) !important;
+            padding: 0 !important;
+            margin-right: 0 !important;
+        }
+        .address_state {
+            width: calc(50% - 15px) !important;
+            padding: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        .StripeElement {
+            height:60px;
+            padding:20px 15px;
+            margin-bottom: 20px;
+        }
+
+        .validation_message {
+            padding:0 !important;
+            margin:-10px 0 10px;
+        }
+    }
+
+    .radiobox {
+        .gfield_radio {
+            > li {
+                position:relative;
+    
+                input {
+                    position: absolute;
+                    z-index:1;
+                    margin: 11px 13px !important;
+                    opacity: 0;
+    
+                    &:checked + label:before {
+                        background: $color-secondary;
+                    }
+                }
+                label {
+                    position:relative;
+                    display:inline-block;
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding:0 0 0 40px;
+                    min-height:30px;
+                    &:before {
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        border: solid 2px $color-light-grey;
+                        background-color: $color-white;
+                        border-radius: 50%;
+                        position:absolute;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .validation_message {
+            padding:0 !important;
+            margin:-10px 0 10px;
+        }
+    }
+
+    
+
+    @include media(max-width, 641px) {
+        .field_half {
+            width:100% !important;
+
+            + .field_half {
+                margin-left:0 !important;
+            }
+        }
+        
+        .fields .gf_name_has_2 > span {
+            width: 100% !important;
+            margin:0 !important;
+        }
+        
+        .fields .address_state,
+        .fields .address_zip {
+            width: 100% !important;
+        }
+        .fields .address_zip {
+            margin-left: 0 !important;
+        }
+    }
+}
 
 
 // Banner section
@@ -1235,8 +1334,8 @@ ul.circle, ul.circle_list {
                 position: relative;
             }
 
-            .gf_page_steps .gf_step_active {
-                color: #6d9f0f;
+            .gf_step_active {
+                color: $color-secondary;
 
                 &:before {
                     content: "";
@@ -1309,6 +1408,55 @@ ul.circle, ul.circle_list {
             }
         }
 
+        .field_amount {
+            text-align: center;
+            margin-bottom:40px;
+
+            .gfield_radio > li label {
+                font-size:36px;
+                font-weight: bold;
+                color: $color-primary;
+                line-height:1;
+                padding-right: 15px;
+            }
+        }
+
+        @include media(max-width, 1199px) {
+            .field_amount {
+                .gfield_radio > li label {
+                    font-size:22px;
+                    line-height: 1.4;
+                }
+            }
+        }
+
+        @include media(max-width, 767px) {
+            .inflex ul.gfield_radio {
+                flex-flow: wrap;
+            }
+            
+            .field_amount ul.gfield_radio {
+                justify-content: center;
+            }
+            .field_amount ul.gfield_radio > li {
+                flex-grow:0;
+            }
+            
+            .gf_page_steps {
+                margin-bottom: 50px;
+            }
+            .gf_page_steps .gf_step {
+                font-size:22px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @include media(max-width, 641px) {
+            .button {
+                padding: 12px 20px;
+            }
+        }
     }
 
 
@@ -1342,7 +1490,7 @@ ul.circle, ul.circle_list {
                 margin-bottom: 5px;
             }
         }
-    }
+    } 
 
     .amazon_smile {
         background-size: cover;
@@ -1364,3 +1512,6 @@ ul.circle, ul.circle_list {
 }
 
 /* Donate Page End */
+
+
+
