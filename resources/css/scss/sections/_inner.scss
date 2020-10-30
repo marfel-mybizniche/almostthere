@@ -337,6 +337,8 @@ ul.circle, ul.circle_list {
     }
 
     .fields {
+        min-width: 100%;
+
         label {
             font-size:17px !important;
             font-weight:normal;
@@ -395,6 +397,10 @@ ul.circle, ul.circle_list {
         .validation_message {
             padding:0 !important;
             margin:-10px 0 10px;
+        }
+
+        &.gfield span.address_state + span.address_zip {
+            padding-right: 0 !important;
         }
     }
 
