@@ -31,6 +31,10 @@
 // Buttons
 .button {
 
+    &.secondary {
+        color: $color-black;
+    }
+
     &.btn-petfind {
         background: $color-purple;
         color: $color-white;
@@ -983,7 +987,7 @@ ul.circle, ul.circle_list {
     text-align: center;
 
     a {
-        color: $color-primary;
+        color: $color-secondary;
     }
 
     p {
@@ -991,8 +995,9 @@ ul.circle, ul.circle_list {
     }
 
     h4 {
+        font-size: 43px;
         margin-bottom: 40px;
-        color: $color-primary;
+        color: $color-secondary;
 
         span {
             color: $color-white;
@@ -1279,6 +1284,35 @@ ul.circle, ul.circle_list {
                 top:7px;
             }
         }
+    }
+
+    @include media(max-width, 1023px) {
+        .foster_item {
+            .image {
+                margin-bottom: 25px;
+
+                &.left {
+                    padding-right: 0;
+                }
+    
+                &.right {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 639px) {
+        ul.steps_list {
+            li {
+                padding: 0;
+
+                h5:first-child {
+                    position: static;
+                }
+            }
+        }
+
     }
 }
 /* Foster Page End */
