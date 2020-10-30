@@ -1216,6 +1216,12 @@ ul.circle, ul.circle_list {
             }
             .img_slider {
                 margin-right: 0;
+                position: relative;
+
+                ul {
+                    margin-right: -30px;
+                    position: static;
+                }
             }
         }
 
