@@ -38,9 +38,10 @@
     &.btn-petfind {
         background: $color-purple;
         color: $color-white;
-        padding: 8px 30px 8px 12px;
+        padding: 8px 30px 8px 15px;
         display: inline-flex;
         align-items: center;
+        letter-spacing: 1.6px;
 
         img {
             margin-right: 15px;
@@ -73,75 +74,6 @@
     }
 }
 
-//Global 
-.hline {
-    display: flex;
-    text-align: center;
-    position: relative;
-    white-space: nowrap; 
-    align-items: center;
-    justify-content: center;
-
-    &:before, &:after {
-        content: "";
-        width: 100%;
-        border-top:1px solid $color-light-grey;
-        margin-right: 30px;
-    }
-    &:after {
-        margin-right: 0;
-        margin-left: 30px;
-    }
-
-    &.left {
-        justify-content: left;
-        &:before {
-            display: none;
-        }
-    }
-}
-
-
-// Buttons
-.button {
-
-    &.btn-petfind {
-        background: $color-purple;
-        color: $color-white;
-        padding: 8px 30px 8px 12px;
-        display: inline-flex;
-        align-items: center;
-
-        img {
-            margin-right: 15px;
-        }
-
-        &:hover {
-            background: lighten($color-purple, 10%);
-        }
-    }
-
-    &.btn-icon {
-        padding: 8px 30px 8px 25px;
-        display: inline-flex;
-        align-items: center;
-        min-height: 57px;
-        font-size: 16px;
-        letter-spacing: 1.6px;
-
-        small {
-            font-size: 16px;
-            font-weight: normal;
-            padding-left: 10px;
-        }
-        
-        img {
-            margin-right: 15px;
-            max-width: 38px;
-            max-height: 38px;
-        }
-    }
-}
 
 .button-a {
     margin:0;
@@ -176,6 +108,7 @@
             font-size: 16px;
             font-weight: normal;
             padding-left: 10px;
+            text-transform: none;
         }
     }
 
@@ -486,6 +419,12 @@ ul.circle, ul.circle_list {
     h2 {
         margin-bottom: 25px;
         color: $color-secondary;
+    }
+
+    .button-a a {
+        img {
+            margin-right: 20px;
+        }
     }
 
     @include media(max-width, 1023px){
@@ -1662,3 +1601,16 @@ ul.circle, ul.circle_list {
 }
 
 /* 404 Page End */
+
+
+.social_links a {
+    color: $color-grey;
+
+    &.color-purple {
+        color: $color-purple; 
+    }
+    
+    &.color-fb {
+        color: $color-fb;
+    } 
+}
