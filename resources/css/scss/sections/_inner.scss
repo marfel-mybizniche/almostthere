@@ -1206,12 +1206,16 @@ ul.circle, ul.circle_list {
     @include media(max-width, 639px) {
         .past_item {
 
+
             .image {
                 margin-bottom: 15px;
             }
 
             .nav_slider {
                 display: none;
+            }
+            .img_slider {
+                margin-right: 0;
             }
         }
 
