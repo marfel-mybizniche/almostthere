@@ -1,57 +1,8 @@
 @import "main";
+
 /* your Code Here */
 .home p {
     font-size: $paragraph-fs-home;
-}
-
-header .hsnav-s11 .navbar .navleft.navmenu{
-    a{
-        padding-left:15px;
-        padding-right:15px;
-    }
-
-    ul.sub-menu{
-        min-width:180px;
-        display:none;
-        > li{
-            > a{
-                font-size:16px;
-                text-transform: none;
-                padding:7px 25px;
-            }
-        }
-    }
-
-    li.is-active > ul.sub-menu{
-        display:block;
-    }
-    
-    .is-dropdown-submenu{
-        border:none;
-    }
-}
-
-.phone_nav{
-    a{
-        &::before{
-            background-image:url('../img/icons/icon_phone.svg');
-            background-repeat:no-repeat;
-            background-position: center;
-            padding-left:30px;
-            content:'';
-        }
-    }
-}
-
-.btn_nav{
-    > a{
-        background:$color-primary;
-        color:#fff !important;
-        &:hover{
-            color:#fff !important;
-            background:$color-secondary;
-        }
-    }
 }
 
 .hero-s6 .hero-caption{
@@ -69,6 +20,7 @@ header .hsnav-s11 .navbar .navleft.navmenu{
         font-size:74px;
         letter-spacing: -2.96px;
         margin-bottom:58px;
+        line-height: 1;
     }
     .button{
         margin-right:5px;
@@ -93,6 +45,7 @@ header .hsnav-s11 .navbar .navleft.navmenu{
             font-weight:700;
             font-family:$heading-special;
             letter-spacing: -2.24px;
+            display: inline-block;
         }
     }
 }
@@ -177,12 +130,14 @@ header .hsnav-s11 .navbar .navleft.navmenu{
             font-size:46px;
             color:$color-darker;
             margin-bottom:25px;
+            line-height: 1;
             strong{ 
                 font-family:$heading-special;
                 font-weight:700;
                 color:$color-primary;
                 font-size:56px;
                 letter-spacing: -2.24px;
+                display: inline-block;
             }
         }
 
@@ -518,6 +473,7 @@ input[type="submit"].button{
                 margin-right:auto;
                 margin-bottom:30px;
                 text-align: center;
+                line-height: 1;
             }
         }
     }
