@@ -493,7 +493,7 @@ ul.circle, ul.circle_list {
         span {
             font-family: $heading-special;
             font-weight: normal;
-            color: $color-secondary;
+            color: $color-primary;
             letter-spacing: -1px;
         }
     }
@@ -607,12 +607,14 @@ ul.circle, ul.circle_list {
 
         h5 {
             margin-bottom: 20px;
+            color: $color-primary;
 
             small, s {
                 text-decoration: none;
                 color: $color-darker;
                 font-size: 17px;
                 display: inline-block;
+                margin-left: 15px;
             }
         }
 

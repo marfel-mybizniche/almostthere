@@ -7,7 +7,7 @@
 
     <section class="hero hero-s6">
         <figure class="bg">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner_hero.jpg" alt="<?php echo get_bloginfo('name'); ?>" />
+            <img src="<?php echo MBN_ASSETS_URI ?>/img/banner_hero.jpg" alt="<?php echo get_bloginfo('name'); ?>" />
         </figure>
         <div class="hero-caption middle">
             <div class="grid-container"> 
@@ -17,19 +17,19 @@
                         <h2>large breed, pregnant, and nursing dogs.</h2>
                         
                         <a href="<?php the_permalink(222); ?>" class="button with_icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_donate.svg" alt="Donate" /> 
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_donate.svg" alt="Donate" /> 
                             <span>Donate</span>
                         </a>
                         <a href="<?php the_permalink(100); ?>" class="button with_icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_volunteer.svg" alt="Volunteer" /> 
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_volunteer.svg" alt="Volunteer" /> 
                             <span>Volunteer</span>
                         </a>
                         <a href="<?php the_permalink(141); ?>" class="button with_icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_foster.svg" alt="Foster" /> 
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_foster.svg" alt="Foster" /> 
                             <span>Foster</span>
                         </a>
                         <a href="<?php the_permalink(220); ?>" class="button with_icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_adopt.svg" alt="Adopt" /> 
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_adopt.svg" alt="Adopt" /> 
                             <span>Adopt</span>
                         </a>
                     </div>
@@ -41,19 +41,19 @@
 
      <section class="cta cta-s2 page_section section_relative">
         <figure class="cta-bg"><!-- <img src="assets/img/cta-2.jpg" alt=""> --></figure>
-        <img class="bg_left bg_dogs" src="<?php echo get_template_directory_uri(); ?>/assets/img/dog1.jpg" alt="Almost There Rescue" />
-        <img class="bg_right bg_dogs" src="<?php echo get_template_directory_uri(); ?>/assets/img/dog2.jpg" alt="Almost There Rescue" />
+        <img class="bg_left bg_dogs" src="<?php echo MBN_ASSETS_URI ?>/img/dog1.jpg" alt="Almost There Rescue" />
+        <img class="bg_right bg_dogs" src="<?php echo MBN_ASSETS_URI ?>/img/dog2.jpg" alt="Almost There Rescue" />
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell large-8 large-offset-2">
                     <div class="cta-body">
                         <h3>Meet Your <span>New Best Friend</span></h3>
 
-                        <p><strong>Ready to take your heart for a spin?</strong> Just head over to our <img src="<?php echo get_template_directory_uri(); ?>/assets/img/petfinder_text.png" alt="Petfinder" />  page to see all of our adorable pups looking for furever homes. Almost There Rescue has a pretty constant flow of puppies and adult dogs of all kinds who are guaranteed to take your breath away.</p>
+                        <p><strong>Ready to take your heart for a spin?</strong> Just head over to our <img src="<?php echo MBN_ASSETS_URI ?>/img/petfinder_text.png" alt="Petfinder" />  page to see all of our adorable pups looking for furever homes. Almost There Rescue has a pretty constant flow of puppies and adult dogs of all kinds who are guaranteed to take your breath away.</p>
 
                         <p>
                             <a href="http://almostthere.petfinder.com/" target="_blank" class="button purple with_icon">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/petfinder.png" alt="Petfinder" /> 
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/petfinder.png" alt="Petfinder" /> 
                                 <span>View Adoptable Dogs on Petfinder</span>
                             </a>
                         </p>
@@ -61,8 +61,8 @@
                         <div class="keep_in_touch">
                             <p>
                                 <strong>We’d love to keep in touch!</strong> Follow us on: 
-                                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-facebook.png" alt="Facebook" /></a>
-                                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-text-instagram.png" alt="Instagram" /></a>
+                                <a href="#" target="_blank"><img src="<?php echo MBN_ASSETS_URI ?>/img/logo-text-facebook.png" alt="Facebook" /></a>
+                                <a href="#" target="_blank"><img src="<?php echo MBN_ASSETS_URI ?>/img/logo-text-instagram.png" alt="Instagram" /></a>
                                 
                             </p>
                         </div>
@@ -116,12 +116,12 @@
     <section class="page_section image_carousel">
         <div class="grid-container full">
             <div class="grid-x dogs_slider">
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample1.jpg" alt="Almost There Rescue" /></div>
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample2.jpg" alt="Almost There Rescue" /></div>
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample3.jpg" alt="Almost There Rescue" /></div>
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample4.jpg" alt="Almost There Rescue" /></div>
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample2.jpg" alt="Almost There Rescue" /></div>
-                <div class=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sample3.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample1.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample2.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample3.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample4.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample2.jpg" alt="Almost There Rescue" /></div>
+                <div class=""><img src="<?php echo MBN_ASSETS_URI ?>/img/sample3.jpg" alt="Almost There Rescue" /></div>
             </div>
         </div>
     </section>
@@ -137,14 +137,15 @@
                     <p>Appointments slots are one hour long and are on a first come, first served basis. Upon arrival, we will ask that you fill out our Adoption Questionnaire and wait to be seen by the next available Matchmaker. We look forward to your visit, and can’t wait for you to fall in love!</p>
 
                     <ul>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/pin.svg" alt="Location" /> <strong>2601 E Indian School Road</strong></li>
-                        <li><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/clock.svg" alt="Office Hours" /> <strong>Weekdays from 11am-8pm and weekends from 8:00am-8:00pm</strong></li>
+                        <li><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/pin.svg" alt="Location" /> <strong>2601 E Indian School Road</strong></li>
+                        <li><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/clock.svg" alt="Office Hours" /> <strong>Weekdays from 11am-8pm and weekends from 8:00am-8:00pm</strong></li>
                     </ul>
 
 
                 </div>
                 <div class="cell large-6 map_content">
-                    <iframe src="https://snazzymaps.com/embed/265816" width="100%" height="750px" style="border:none;"></iframe>
+                    <!-- <iframe src="https://snazzymaps.com/embed/265816" width="100%" height="750px" style="border:none;"></iframe> -->
+                        <iframe src="https://snazzymaps.com/embed/271250" width="100%" height="750px" style="border:none;"></iframe>    
                 </div>
             </div>
         </div>
@@ -154,7 +155,7 @@
         <div class="grid-container full">
             <div class="grid-x align-right">
                 <div class="cell sign_up_image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/signup_banner.jpg" alt="Signup" />
+                    <img src="<?php echo MBN_ASSETS_URI ?>/img/signup_banner.jpg" alt="Signup" />
                 </div>
                 <div class="cell medium-12 large-7 text_content">
                     <h2>Sign Up Fur Updates!</h2>
@@ -162,7 +163,7 @@
                    
                     <p>
                         <a href="#" class="button with_icon green">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_email.svg" alt="Join Our Mailing List" /> 
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_email.svg" alt="Join Our Mailing List" /> 
                             <span>Join Our Mailing List</span>
                         </a>
                     </p>
@@ -178,14 +179,14 @@
                     <div class="grid-x align-center">
                         <div class="cell medium-8 amazon_wishlist_content">
 
-                            <p><img src="<?php echo get_template_directory_uri(); ?>/assets/img/wishlist-amazon.png" alt="Wishlist" /></p>
+                            <p><img src="<?php echo MBN_ASSETS_URI ?>/img/wishlist-amazon.png" alt="Wishlist" /></p>
                     
                             <p>Click here to see our Amazon Wishlist where you can purchase items we desperately need from Amazon.com and have it shipped directly to Almost There Rescue. Thank you! We appreciate your support!</p>
 
                             <p>
                                 <a href="#" class="button with_icon green">
                                     
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_shop.svg" alt="Shop Our Wishlist" /> 
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_shop.svg" alt="Shop Our Wishlist" /> 
                                 <span>Shop Our Wishlist</span>
                                 </a>
                             </p>

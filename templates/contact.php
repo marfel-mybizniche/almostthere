@@ -18,10 +18,10 @@
             </div>
             <div class="contact_right_cell cell large-6 small-12">
                 <div class="view_map_link">
-                    <a data-fancybox data-src="#hidden-content" href="javascript:;"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_img.png" alt="View Map" /></a>
+                    <a data-fancybox data-src="#hidden-content" href="javascript:;"><img src="<?php echo MBN_ASSETS_URI ?>/img/contact_img.png" alt="View Map" /></a>
 
                     <div style="display: none;" id="hidden-content" class="modal_map">
-                        <iframe src="https://snazzymaps.com/embed/265816" width="100%" height="500px" style="border:none;"></iframe>
+                        <iframe src="https://snazzymaps.com/embed/271250" width="100%" height="500px" style="border:none;"></iframe>
                     </div>
                 </div>
                 
@@ -37,8 +37,8 @@
 
                     <div class="social">
                         <h5><span>Connect with us: </span>
-                            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/fb.svg" alt="Facebook" /></a> 
-                            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ig.svg" alt="Instagram" /></a>
+                            <a href="#" target="_blank"><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/fb.svg" alt="Facebook" /></a> 
+                            <a href="#" target="_blank"><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/ig.svg" alt="Instagram" /></a>
                         </h5>
                     </div>
                 </div>
