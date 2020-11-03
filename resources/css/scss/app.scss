@@ -95,13 +95,13 @@
 
             &:hover{
                 svg{
-                    fill:$color-secondary;
+                    //fill:$color-secondary;
                     .cls-2{
-                        fill:#fff;
+                        //fill:#fff;
                     }
                 }
                 span{
-                   color:$color-secondary;
+                   //color:$color-secondary;
                 }
             }
         }
@@ -327,7 +327,7 @@
                 margin-right:25px;
             }
             a{
-                color:$color-primary;
+                color:$color-white;
                 &.white_text{
                     color:#fff;
                 }
@@ -418,6 +418,14 @@ input[type="submit"].button{
 }
 
 
+@media only screen and (max-width : 1280px){
+
+    .hero-s6 .hero-caption{
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
 
 @media only screen and (max-width : 1120px){
     .map_section .text_content ul li{
@@ -428,7 +436,7 @@ input[type="submit"].button{
     .sign_up_section{
         .text_content{
             p{
-                width:100%;
+                width:100%; 
             }
         }
     }
@@ -497,9 +505,17 @@ input[type="submit"].button{
     .hero-s6 .hero-caption{
         width: 100%;
         padding: 160px 40px 60px 40px;
-        background: rgba(0,0,0,0.4);
-        h2{font-size:48px; line-height: 1;}
-        h1{font-size:40px;color:#fff;line-height: 1;}
+        //background: rgba(0,0,0,0.4);
+        h2{
+            font-size:48px; 
+            line-height: 1;
+        }
+        h1{
+            font-size:40px;
+            //color:#fff;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
     }
 
 }
@@ -545,6 +561,8 @@ input[type="submit"].button{
     .hero-s6 .hero-caption{
         padding-top:100px;
         padding-bottom:100px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .ig_feed .ig_title h2 a{
@@ -588,6 +606,16 @@ input[type="submit"].button{
 
     .service_options .service_cell .service_box_wrapper span{
         font-size:20px;
+    }
+
+    .hero-s6 .hero-caption {
+        h1 {
+            font-size: 22px;
+        }
+        h2 {
+            letter-spacing: -1px;
+            font-size: 25px;
+        }
     }
     .hero-caption .button{
         padding:12px 18px;

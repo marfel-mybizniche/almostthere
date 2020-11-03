@@ -59,6 +59,7 @@
         min-height: 57px;
         font-size: 16px;
         letter-spacing: 1.6px;
+        
 
         small {
             font-size: 16px;
@@ -70,6 +71,16 @@
             margin-right: 15px;
             max-width: 38px;
             max-height: 38px;
+        }
+
+        &:hover {
+            background: $color-black;
+            color: $color-white;
+
+            img {
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
+            }
         }
     }
 }
@@ -96,8 +107,13 @@
         align-items: center;
 
         &:hover {
-            background: $color-primary;
-            color: $color-darker;
+            background: $color-black;
+            color: $color-white;
+
+            img {
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
+            }
         }
 
         img {
@@ -431,6 +447,16 @@ ul.circle, ul.circle_list {
         img {
             margin-right: 20px;
         }
+
+        &:hover {
+            background: $color-white;
+            color: $color-black;
+
+            img {
+                -webkit-filter: none;
+                filter: none;
+            }
+        }
     }
 
     @include media(max-width, 1023px){
@@ -684,6 +710,13 @@ ul.circle, ul.circle_list {
         img {
             margin-right: 5px;
         }
+
+        &:hover {
+            img {
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
+            }
+        }
     }
 
     
@@ -852,6 +885,17 @@ ul.circle, ul.circle_list {
 
             img {
                 margin-right: 5px;
+                
+            }
+
+            &:hover {
+                background: $color-black;
+                color: $color-white;
+
+                img {
+                    -webkit-filter: invert(100%);
+                    filter: invert(100%);
+                }
             }
         }
     }
@@ -1506,6 +1550,117 @@ ul.circle, ul.circle_list {
                 line-height:1;
                 padding-right: 15px;
             }
+
+
+            //updates with pictures
+            &.gfield {
+                ul.gfield_radio {
+                    width: auto !important;
+                    justify-content:center;
+                    
+                    li {
+                        flex: auto;
+                        flex-basis:200px;
+                        padding-top:170px !important;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            height: 160px;
+                            overflow: hidden;
+                            width: calc(100% - 3px);
+                            display: block;
+                        }
+                        &:after {
+                            content:"";
+                            position: absolute;
+                            top: 0;
+                            height: 160px;
+                            overflow: hidden;
+                            width: calc(100% - 3px);
+                            padding: 20px;
+                            display: block;
+                            background: rgba(0,0,0,0.5);
+                            text-align:center;
+                            color: #fff;
+                            display: flex;
+                            align-items: center;
+                            opacity:0;
+                            justify-content: center;
+                        }
+
+                        &:hover {
+                            &:after {
+                                opacity:1;
+                            }
+
+                            label {
+                                color:#000 !important;
+                            }
+                        }
+                    }
+                    .gchoice_3_20_0 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5a.jpg) no-repeat center top / cover;
+                        }
+
+                        &:after {
+                            content:"Pays for a double sided puppy feeding bowl";
+                        }
+                    }
+                    .gchoice_3_20_1 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5b.jpg) no-repeat center top / cover;
+                        }
+
+                        &:after {
+                            content:"Buys a bottle feeding kit needed for newborn puppies that come in without a mother";
+                        }
+                    }
+                    .gchoice_3_20_2 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5c.jpg) no-repeat center top / cover;
+                        }
+                        &:after {
+                            content:"Covers the costs to vaccinate a puppy";
+                        }
+                    }
+                    .gchoice_3_20_3 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5d.jpg) no-repeat center top / cover;
+                        }
+                        &:after {
+                            content:"Gets a harness, martingale collar and leash for a mama";
+                        }
+                    }
+                    .gchoice_3_20_4 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5e.jpg) no-repeat center top / cover;
+                        }
+                        &:after {
+                            content:"Covers the spay for a mama dog";
+                        }
+                    }
+                    .gchoice_3_20_5 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5f.jpg) no-repeat center top / cover;
+                        }
+                        &:after {
+                            content:"Buys microchips for THREE litters of puppies";
+                        }
+                    }
+                    .gchoice_3_20_6 {
+                        &:before {
+                            background: url(/wp-content/uploads/2020/10/img-donate-5g.jpg) no-repeat center top / cover;
+                        }
+
+                        &:after {
+                            content:"Pays for spay/neuter of an entire litter of puppies";
+                        }
+                    }
+                }
+            } 
         }
 
         @include media(max-width, 1199px) {
@@ -1513,6 +1668,32 @@ ul.circle, ul.circle_list {
                 .gfield_radio > li label {
                     font-size:22px;
                     line-height: 1.4;
+                }
+
+                //updates
+                &.gfield {
+                    ul.gfield_radio {
+                        flex-flow: wrap;
+
+                        li {
+                            flex-basis:25%;
+                            flex-grow: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media(max-width, 1023px) {
+            .field_amount {
+
+                //updates
+                &.gfield {
+                    ul.gfield_radio {
+                        li {
+                            flex-basis:33%;
+                        }
+                    }
                 }
             }
         }
@@ -1542,6 +1723,22 @@ ul.circle, ul.circle_list {
         @include media(max-width, 641px) {
             .button {
                 padding: 12px 20px;
+            }
+
+            .field_amount {
+
+                //updates
+                &.gfield {
+                    ul.gfield_radio {
+                        li {
+                            flex-basis:50%;
+
+                            label {
+                                width:auto;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
