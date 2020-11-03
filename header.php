@@ -54,10 +54,10 @@
                         </li>
                         <li class="social">
                             <h5><span>Connect with us: </span>
-                                <a href="#" target="_blank">
+                                <a href="https://www.facebook.com/almostthererescue" target="_blank">
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/fb.svg" alt="Facebook">
                                 </a> 
-                                <a href="#" target="_blank">
+                                <a href="https://www.instagram.com/almostthererescue" target="_blank">
                                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/ig.svg" alt="Instagram">
                                 </a>
                             </h5>

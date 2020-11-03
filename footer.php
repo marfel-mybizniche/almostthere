@@ -20,7 +20,7 @@
 
                     <div class="footer_logo">
                         <a href="<?php echo home_url(); ?>" title="<?php echo get_bloginfo("name"); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_footer.png" alt="<?php echo get_bloginfo('name'); ?>" />
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/logo_footer.png" alt="<?php echo get_bloginfo('name'); ?>" />
                         </a>
                         <h2>a mom + pups rescue</h2>
                     </div>
@@ -33,16 +33,19 @@
 
                     <div class="footer_contact_details">
                         <div class="phone_social">
-                            <div class="iBlock phone"><a href="tel:6029120064"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_white_phone.svg" alt="Facebook" />602.912.0064</a></div>
+                            <div class="iBlock phone">
+                                <a href="tel:6029120064"><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_white_phone.svg" alt="Facebook" />602.912.0064</a></div>
                             <div class="iBlock social">
                                 <h5><span>Connect with us: </span>
-                                    <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/fb.svg" alt="Facebook" /></a> 
-                                    <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/ig.svg" alt="Instagram" /></a>
+                                    <a href="https://www.facebook.com/almostthererescue" target="_blank">
+                                        <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/fb.svg" alt="Facebook" /></a> 
+                                    <a href="https://www.instagram.com/almostthererescue/" target="_blank">
+                                        <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/ig.svg" alt="Instagram" /></a>
                                 </h5>
                             </div>
                         </div>
                         <div class="email">
-                            <div class="iBlock"><a href="mailto:info@almostthererescue.org"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/icon_white_email.svg" alt="Mail Us" /> info@almostthererescue.org</a></div>
+                            <div class="iBlock"><a href="mailto:info@almostthererescue.org"><img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_white_email.svg" alt="Mail Us" /> info@almostthererescue.org</a></div>
                         </div>
                     </div>
 
