@@ -91,8 +91,8 @@
 
     a {
         background: $color-secondary;
+        color: $color-white;
         display: inline-block;
-        color: $color-darker;
         line-height: 26px;
         letter-spacing: 1.6px;
         padding: 12px 30px;
@@ -109,15 +109,12 @@
         &:hover {
             background: $color-black;
             color: $color-white;
-
-            img {
-                -webkit-filter: invert(100%);
-                filter: invert(100%);
-            }
         }
 
         img {
             margin-right: 15px;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
         }
 
         small {
@@ -144,7 +141,7 @@
 .wp-block-button__link {
     background: $color-secondary;
     display: inline-block;
-    color: $color-darker;
+    color: $color-white;
     line-height: 26px;
     letter-spacing: 1.6px;
     padding: 12px 30px;
@@ -159,8 +156,8 @@
     align-items: center;
 
     &:hover {
-        background: $color-primary;
-        color: $color-darker;
+        background: $color-black;
+        color: $color-white;
     }
 
     img {
@@ -702,20 +699,19 @@ ul.circle, ul.circle_list {
     }
 
     .btn-join {
-        color: black;
+        color: $color-white;
         line-height: 20px;
         letter-spacing: 1.6px;
         padding: 17px 35px;
 
         img {
             margin-right: 5px;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
         }
 
         &:hover {
-            img {
-                -webkit-filter: invert(100%);
-                filter: invert(100%);
-            }
+            background: $color-black;
         }
     }
 
