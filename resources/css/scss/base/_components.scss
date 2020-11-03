@@ -234,9 +234,20 @@
     }
     &.green{
         background:$color-secondary;
-        color:$color-black;
+        color:$color-white;
         &:hover{
-            background:$color-white;
+            background: $color-white;
+            color: $color-black;
+
+            img {
+                -webkit-filter: none;
+                filter: none;
+            }
+        }
+
+        img {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
         }
     }
 }
