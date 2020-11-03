@@ -1409,12 +1409,19 @@ ul.circle, ul.circle_list {
 
         .button {
             background:$color-secondary;
+            color: $color-white;
             display:inline-flex !important;
             align-items:center;
             padding:15px 30px;
+
+            &:hover {
+                background: $color-black;
+                color: $color-white;
+            }
         }
         .gform_previous_button {
             background:$color-light-grey;
+            color: $color-black;
 
             &:before {
                 content: "";
@@ -1426,6 +1433,11 @@ ul.circle, ul.circle_list {
                 margin-right:20px;
                 margin-left:-10px;
             } 
+
+            &:hover {
+                background:$color-light-grey;
+                color: $color-black;
+            }
         }
         
         .gform_button:after,
@@ -1437,6 +1449,8 @@ ul.circle, ul.circle_list {
             display:inline-block;
             margin-left:20px;
             margin-right:-10px;
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
         }
 
         .gf_page_steps {
