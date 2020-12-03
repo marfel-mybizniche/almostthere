@@ -17,19 +17,19 @@
                         <h2>large breed, pregnant, and nursing dogs.</h2>
                         
                         <a href="<?php the_permalink(222); ?>" class="button with_icon">
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_donate.svg" alt="Donate" /> 
+                            <img class="iblack" src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_donate.svg" alt="Donate" /> 
                             <span>Donate</span>
                         </a>
                         <a href="<?php the_permalink(100); ?>" class="button with_icon">
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_volunteer.svg" alt="Volunteer" /> 
+                            <img class="iblack" src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_volunteer.svg" alt="Volunteer" /> 
                             <span>Volunteer</span>
                         </a>
                         <a href="<?php the_permalink(141); ?>" class="button with_icon">
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_foster.svg" alt="Foster" /> 
+                            <img class="iblack" src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_foster.svg" alt="Foster" /> 
                             <span>Foster</span>
                         </a>
                         <a href="<?php the_permalink(220); ?>" class="button with_icon">
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_adopt.svg" alt="Adopt" /> 
+                            <img class="iblack" src="<?php echo MBN_ASSETS_URI ?>/img/icons/icon_adopt.svg" alt="Adopt" /> 
                             <span>Adopt</span>
                         </a>
                     </div>

@@ -18,8 +18,16 @@
             </div>
             <div class="contact_right_cell cell large-6 small-12">
                 <div class="view_map_link">
-                    <a data-fancybox data-src="#hidden-content" href="javascript:;"><img src="<?php echo MBN_ASSETS_URI ?>/img/contact_img.png" alt="View Map" /></a>
-
+                    <span class="icon">
+                        <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-atr.png" alt="">
+                    </span>
+                    <figure>
+                        <a data-fancybox data-src="#hidden-content" href="javascript:;">
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/atr-front.jpg" alt="">
+                            <figcaption>View Map</figcaption>  
+                        </a>
+                    </figure>
+                    <!-- <a data-fancybox data-src="#hidden-content" href="javascript:;"><img src="<?php echo MBN_ASSETS_URI ?>/img/contact_img.png" alt="View Map" /></a> -->
                     <div style="display: none;" id="hidden-content" class="modal_map">
                         <iframe src="https://snazzymaps.com/embed/271250" width="100%" height="500px" style="border:none;"></iframe>
                     </div>

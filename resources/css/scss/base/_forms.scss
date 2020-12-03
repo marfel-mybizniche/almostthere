@@ -23,7 +23,7 @@ input[type=submit]{
     cursor:pointer;
     &:hover{
         background:$color-secondary;
-        color:#000;
+        color:$color-white;
     }
 }
 

@@ -209,8 +209,8 @@
 
 .button{
     background:$color-white;
-    font-size:16px;
     color:$color-black;
+    font-size:16px;
     font-weight:900;
     text-transform: uppercase;
     border-radius:110px;
@@ -219,6 +219,11 @@
     &:hover{
         background: $color-secondary;
         color:$color-white;
+
+        .iblack {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+        }
     }
     &.purple{
         background:$color-purple;

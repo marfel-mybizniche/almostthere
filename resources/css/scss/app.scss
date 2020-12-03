@@ -304,7 +304,7 @@
 .contact_right_cell{
     padding-left:40px;
     padding-right:calc(((100% - 1440px) / 2) + 20px);
-    background:$color-dark-primary;
+    background:$color-primary;
 
     .contact_details{
         padding-left:65px;
@@ -327,11 +327,42 @@
                 margin-right:25px;
             }
             a{
-                color:$color-white;
+                color:$color-white; 
                 &.white_text{
                     color:#fff;
                 }
             }
+        }
+    }
+
+    .view_map_link {
+        position: relative;
+        margin: 60px 30px 0 65px;
+        
+        figure {
+            position: relative;
+
+            figcaption {
+                background: $color-black;
+                color: $color-white;
+                text-align: center;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 5px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    
+        .icon {
+            position: absolute;
+            left: -55px;
+            top: -55px;
+            z-index: 1;
         }
     }
 
